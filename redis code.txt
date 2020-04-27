@@ -1,0 +1,18 @@
+redis-server
+redis-cli
+
+//az sakhtare hash baraye zakhireye ettelaat estefade mikonim
+HSET without_index:first time "Execution Time: 2052.591 ms(first try)"
+HSET without_index:second time "Execution Time: 2070.286 ms(second try)"
+HSET without_index:third time "Execution Time: 2053.701 ms(third try)"
+
+HSET with_index:first time "Execution Time: 1607.132 ms(first try)"
+HSET with_index:second time "Execution Time: 1611.857 ms(second try)"
+HSET with_index:third time "Execution Time: 1595.625 ms(third try)"
+
+save
+
+//baraye gereftane ettelatat mitavan az dasturate zir estefade kard
+HGET without_index:first time
+HGET with_index:second time
+
